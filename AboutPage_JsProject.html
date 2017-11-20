@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery-circle-progress/dist/circle-progress.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <meta charset="utf-8">
+
+    <title>About Us</title>
+
+     <style media="screen">
+
+       body{
+         font-family: 'Lato', sans-serif;
+         margin-left: 50px;
+         margin-right: 50px;
+         max-width: 1500px;
+         color: grey;
+       }
+
+       nav{
+         overflow: hidden;
+         background-color: white;
+         position: fixed;
+         top: 0;
+         width: 1300px;
+       }
+
+
+      nav ul{
+          list-style-type: none;
+      }
+
+       nav li{
+           display: inline;
+           margin-bottom: 20px;
+           text-align: center;
+
+       }
+
+       nav li a {
+             text-decoration: none;
+             color: grey
+       }
+
+       nav li a:hover{
+                      color: indianred;
+       }
+
+        header{
+              width: 1200px;
+              height: 200px;
+              background-color: lightgrey;
+              color: #666666;
+              text-align: center;
+              margin-top: 150px;
+        }
+
+
+        #aboutH1{
+                 padding-top: 80px;
+        }
+
+        .grid{
+                display: grid;
+                grid-template-columns: 600px 600px ;
+                grid-gap: 100px;
+                margin-top: 120px;
+        }
+
+        .grid_whoarewe{
+                       display: grid;
+                       grid-template-columns: 600px 700px;
+                       margin-top: 120px;
+        }
+
+        #section_WhoWeAreInfo{
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               grid-template-rows: 1fr 1fr;
+               grid-gap: 6px;
+               padding-right: 50px;
+        }
+         #btn_courses{
+                background-color: indianred;
+                border-radius:10%;
+                width: 120px;
+                height: 40px;
+                text-align: center;
+                color: white;
+         }
+         #btn_courses a:hover{
+                     background-color: indianred;
+                     color: white;
+                     width: 180px;
+                     height: 60px;
+         }
+         #btn_courses:hover{
+                    background-color: indianred;
+                    width: 180px;
+                    height: 60px;
+
+         }
+
+         #btn_courses a{
+                 text-decoration: none;
+                 color: white;
+         }
+
+           #theteam{
+                   margin-left: 150px;
+                   padding-bottom: 100px;
+                   padding-top: 100px;
+
+           }
+
+           #pics{
+                 display: grid;
+                 grid-template-columns: 1fr 1fr 1fr 1fr;
+                 grid-row: 1fr 1fr;
+           }
+
+            .about_info ul{
+                      list-style-type: none;
+                      display: inline;
+                      padding-right: 100px;
+
+
+            }
+
+            .about_info li {
+                      display: inline;
+                      padding-left: 10px;
+            }
+            .about_info li a{
+                       color: grey;
+            }
+
+
+            .circle {
+              width: 50px;
+              margin: 6px 20px 20px;
+              display: inline-block;
+              position: relative;
+              text-align: center;
+
+            }
+              strong {
+              position: absolute;
+              top: 30px;
+              left: 45px;
+              width: 70px;
+              text-align: center;
+              line-height: 45px;
+              font-size: 30px;
+              color:white;
+            }
+            }
+            .timer{
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr 1fr;
+                  grid-template-rows: 1fr;
+                  grid-gap: 5px;
+                  width: 1150px;
+                  height: 250px;
+                  background-color: black;
+                  padding-top: 90px;
+                  padding-left: 100px;
+            }
+
+             .timer div{
+                        width: 150px;
+                        height:150px;
+
+             }
+
+             .div_timer{
+                    background-color: black;
+                  width: 1229px;
+                  height: 250px;
+             }
+             #sub-btn{
+               background-color: indianred;
+               border-radius: 5px;
+               width: 90px;
+               height: 25px;
+               text-align: center;
+               color: white;
+             }
+
+             #sub-btn:hover{
+                         background-color: indianred;
+                         color: white;
+                         width: 135px;
+                         height: 37.5px;
+
+             }
+
+             #sub{
+                  padding-bottom: 70px;
+                  padding-top: 70px;
+                  text-align: center;
+
+             }
+
+             #slide{
+                    width: 100%;
+                    height:250px;
+                    background-color: black;
+                    padding-top: 50px;
+             }
+
+             footer{
+                     display: grid;
+                     grid-template-columns: 1fr 1fr 1fr 1fr;
+                     grid-template-rows: 1fr;
+                     width: 1229px;
+                     height: 250px;
+                     padding-top: 50px;
+                     grid-gap: 5px;
+                     padding-left: 20px;
+             }
+
+             footer div{
+                        height: 200px;
+                        width: 300px;
+
+
+             }
+
+            .material-icons{
+                            font-size: 15px;
+                            padding-right: 10px;
+                            padding-top: 10px;
+            }
+
+
+
+
+            #contact_section li{
+                   list-style-type: none;
+                   padding-top: 10px;
+
+            }
+            .footer_list ul{
+                   list-style-type: square;
+
+            }
+
+             .footer_list li{
+                  padding-top: 10px;
+             }
+            .footer_list a{
+                  color: grey;
+                  text-decoration: none
+            }
+            .footer_list a:hover{
+                        color: indianred;
+            }
+
+            h4,h1,h3,h2{
+               color: #4d4d4d;
+            }
+
+            #bottom_footer{
+              background-color: indianred;
+              width: 1249px;
+              height: 50px;
+              color: white;
+
+            }
+
+            #bottom_footer_list li{
+                 list-style-type: none;
+                  display: inline;
+                  padding-top: 20px;
+            }
+
+            #bottom_footer_list li a{
+                     color: white;
+            }
+
+
+            .first_Word{
+                        border-bottom: 4px solid indianred;
+                        padding-right: 5px;
+            }
+
+            .second_part{
+                         border-bottom: 2px solid lightgrey;
+                         padding-bottom: 1px;
+            }
+
+            #WhoAreWe_grid{
+                      background-color: #e6e6e6;
+                      height: 800px;
+                      width: 600px;
+                      padding-left: 50px;
+            }
+            #carousel_ul{
+                          list-style-type: none;
+            }
+
+            #carousel_ul li{
+                            display: inline;
+            }
+            #carousel_container{
+                               height: 250px;
+                               width: 1060px;
+                               background-color: black;
+                               padding-top: 70px;
+                               padding-left: 190px;
+            }
+
+
+     </style>
+
+
+
+  </head>
+  <body>
+    <nav>
+     <ul>
+       <li><img src="images\Logos\code4ct_logo_360.jpg" alt="" width="300px" height="70px"></li>
+       <li style="padding-left:80px"><a href="JS_project.html">HOME</a></li>
+       <li style="padding-left:10px"><a href="AboutPage_JsProject.html">ABOUT</a></li>
+       <li style="padding-left:10px"><a href="CoursesPage_JsProject.html">COURSES</a></li>
+       <li style="padding-left:10px"><a href="ContactPage_JsProject.html">CONTACT</a></li>
+       <input type="text" placeholder="search"  maxlength="10px" size="15">
+       <button id="search"><i style="font-size:12.5px;color:indianred" class="fa">&#xf002;</i></button>
+     </ul>
+    </nav>
+
+    <header>
+     <h1 id="aboutH1">ABOUT US</h1>
+    </header>
+
+    <div class="grid">
+
+      <div id="welcome">
+        <h2><span class="first_Word">WELCOME</span><span class="second_part">TO CODE4CT</span></h2>
+        <p>Code4CT is broadening perspectives about career opportunities for many girls and is showing them that the ICT sector offers exciting career paths with the opportunity for social impact. Through using coding and web building skills, participants are exposed to how IT skills can be applied to solve problems, and they are encouraged to use their knowledge to tackle a real local challenge.</p>
+         <br/>
+         <br/>
+        <button type="button" name="button" id="btn_courses"><a href="CoursesPage_JsProject.html">Our courses</a></button>
+      </div>
+
+      <div id="img">
+        <img src="images\aboutPage.jpg" alt="" width="500px" height="400px">
+      </div>
+
+      </div>
+
+      <div class="grid_whoarewe">
+        <div>
+          <img src="images\aboutWhoAreWe.jpg" alt="" width="700px" height="800px">
+        </div>
+
+         <div id="WhoAreWe_grid">
+           <h2><span class="first_Word">Who</span><span class="second_part">are we?</span></h2>
+           <p>Code for Cape Town strives to see young women empowered to leverage technology for social innovation, so that there is greater diversity in the African tech industry.</p>
+             <div id="section_WhoWeAreInfo">
+              <div>
+                <h4 style="color:indianred">Our Vision</h4>
+                <p>Young women will discover how they can leverage technology for social innovation. They will develop the skills that will allow them to contribute meaningfully to SA’s innovation system.  They will be challenged to direct their own learning and reach their full potential.Code4CT students will shape a new face of technology in South Africa, the continent and the world.Code4CT will significantly improve the calibre of skills entering the workforce..</p>
+              </div>
+
+              <div>
+                <h4 style="color:indianred">Our Mission</h4>
+                <p>Our coders are required to work in a collaborative, self-directed manner; taking responsibility for their own learning, working in culturally diverse groups, and responding efficiently to change.Through self reflection and small group mentoring, learners are guided in developing critical life and career skills. Our framework focuses on the following life skills: Flexibility & Adaptability, Initiative and Self Direction, Social and Cross Cultural Skills, Productivity & Accountability, Leadership & Responsibility.</p>
+              </div>
+
+              <div>
+                <h4 style="color:indianred">Our Help</h4>
+                <p>We equip high potential female learners with the coding, problem solving and life skills that will allow them to leverage technology to contribute meaningfully to South Africa’s innovation system. The program exposes young women to how technology can be used for social innovation and helps them navigate critical study decisions.</p>
+              </div>
+
+              <div>
+                <h4 style="color:indianred">Our Support</h4>
+                <p>The success of our work depends on the support of likeminded individuals and companies who come alongside us to work towards our mission.During school holidays learners Code4CT connects young coders to local tech companies where they spend 4-5 days working on a code project under the supervision of a Code Coach. The intention is that these aspiring young coders are exposed to the work environment and gain experience in a professional work setting.</p>
+              </div>
+
+             </div>
+
+         </div>
+
+      </div>
+
+
+
+      <section id="theteam">
+        <h2><span class="first_Word">Meet</span><span class="second_part">Our Team</span></h2>
+        <p>This is part of our core team.</p>
+
+          <div id="pics">
+
+            <div>
+             <img src="images\Team\Emma.jpg" alt="" width="200px" height="280px">
+            </div>
+
+             <div class="about_info">
+               <h2>Emma Dicks</h2>
+               <caption><i>Founder and Director</i></caption>
+               <p>Emma is passionate about providing high quality education that enables young people to bring innovative ideas to life and play an active role in South Africa’s economy.</p>
+               <ul>
+                 <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                 <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                 <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+                 <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                 <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                 <li><a href=""><i class="fa fa-skype"></i></a></li>
+               </ul>
+             </div>
+
+             <div>
+               <img src="images\Team\Andrea.jpg" alt="" width="200px" height="280px">
+             </div>
+
+             <div class="about_info">
+               <h2>Andrea Petersen</h2>
+               <caption><i>Operations Lead</i></caption>
+               <p>Andrea thrives on seeing key players in the Code4CT ecosystem discover how they can make the greatest impact.</p>
+               <ul>
+                 <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                 <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                 <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+                 <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                 <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                 <li><a href=""><i class="fa fa-skype"></i></a></li>
+               </ul>
+             </div>
+
+             <div class="about_info">
+               <img src="images\Team\Tegan.jpg" alt="" width="200px" height="280px">
+             </div>
+
+             <div class="about_info">
+               <h2>Tegan Crous</h2>
+               <caption><i>Program Lead</i></caption>
+               <p>Tegan heads up the high school program.She is spurred on by a heart for people and seeing them pursue their potential in a safe, fun and nurturing environment.</p>
+               <ul>
+                 <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                 <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                 <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+                 <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                 <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                 <li><a href=""><i class="fa fa-skype"></i></a></li>
+               </ul>
+             </div>
+
+             <div>
+               <img src="images\Team\Tracy.jpg" alt="" width="200px" height="280px">
+             </div>
+
+             <div class="about_info">
+               <h2>Tracy-Anne Sikenjana</h2>
+               <caption><i>Leadership Program Manager</i></caption>
+               <p>Tracy joined the Code4CT program in 2015 and then matriculated from Rustenburg Girls’ High in 2016. She decided to intern with Code4CT to give back to an organisation that had a large impact on her.</p>
+               <ul>
+                 <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                 <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                 <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+                 <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                 <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                 <li><i class="fa fa-skype"></i></li>
+               </ul>
+             </div>
+
+           </div>
+         </section>
+         <div class="div_timer">
+
+             <section class="timer">
+
+               <div class="circle" id="circle-a">
+                 <strong>85%</strong>
+                 <h3>Web Design</h3>
+               </div>
+
+               <div class="circle" id="circle-b">
+                 <strong>80%</strong>
+                 <h3>Branding</h3>
+               </div>
+
+               <div class="circle" id="circle-c">
+                 <strong>90%</strong>
+                 <h3>Photography</h3>
+               </div>
+
+               <div class="circle" id="circle-d">
+                 <strong>97%</strong>
+                 <h3>Print Design</h3>
+               </div>
+
+             </section>
+
+           </div>
+
+             <script type="text/javascript">
+
+         var progressBarOptions = {
+         startAngle: -1.55,
+         size: 100,
+           value: 0.85,
+           fill: {
+           color: 'red'
+         }
+         }
+
+         $('.circle').circleProgress(progressBarOptions).on('circle-animation-progress', function(event, progress, stepValue) {
+         });
+
+         $('#circle-b').circleProgress({
+         value : 0.80,
+         fill: {
+           color: 'red'
+         }
+         });
+
+         $('#circle-c').circleProgress({
+           value : 0.90,
+           fill: {
+             color: 'red'
+           }
+         });
+
+         $('#circle-d').circleProgress({
+           value : 0.97,
+           fill: {
+             color: 'red'
+           }
+         });
+             </script>
+
+
+
+         <section id="sub">
+           <h3><i class="fa fa-paper-plane" style="font-size:20px;color:indianred;padding-right:20px"></i>SUBSCRIBE TO US</h3>
+           <p>Join our weekly subscription for the latest news on Code4ct</p>
+           <input type="email" name="email" placeholder="enter your email" id="email-input"><button type="button" name="button" id="sub-btn" onclick="check()">Submit</button>
+            <p id="validity-text"></p>
+         </section>
+
+
+         <script type="text/javascript">
+
+          function check()
+          {
+            if(!document.getElementById("email-input").checkValidity())
+            {
+
+              //do stuff here ie. show errors
+              document.getElementById('validity-text').innerHTML ="input not valid!";
+
+            }else
+            {
+                callMeIfValid();
+            }
+          }
+
+          function callMeIfValid()
+          {
+            //submit form or whatever
+               document.getElementById('validity-text').innerHTML = "valid input";
+          }
+         </script>
+
+
+        <div id='carousel_container'>
+        <div id='carousel_inner'>
+        <ul id='carousel_ul'>
+            <li>
+             <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F819T062G-0e4d5651ed/openboxlogo._360.jpg' width="120" height="100px"/>
+            </li>
+
+            <li>
+              <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F82ATB20P-1e13cf13db/45_case_study_logos_11_csg._360.jpg' width="120px" height="100px"/>
+           </li>
+
+            <li>
+              <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F80JKGBMW-4efba088aa/deloitte-logo._360.jpg' width="120" height="100px"/>
+            </li>
+
+           <li>
+              <img  src='https://files.slack.com/files-tmb/T6R8ZLWGK-F8167E93M-3d574ea6b6/mazars-logo._360.jpg' width="120" height="100px"/>
+            </li>
+
+            <li>
+              <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F819SVA04-9739d3d999/mobenzi_logo._360.jpg' width="120" height="100px"/>
+            </li>
+
+            <li>
+              <img src="https://files.slack.com/files-tmb/T6R8ZLWGK-F82ATE90X-518f205964/takealot-logo._360.jpg" width="120" height="100px">
+            </li>
+
+            <li>
+              <img src="https://files.slack.com/files-tmb/T6R8ZLWGK-F80JKJNE4-f29fec516e/tns-logo._360.jpg" alt="" width="120" height="100px">
+            </li>
+
+            </ul>
+        </div>
+   </div>
+
+                     <script src="Js_\JsProjectSlider.js"></script>
+
+
+
+
+         <footer>
+           <div class="footer_list">
+            <h4>Legal</h4>
+             <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+           </div>
+
+           <div class="footer_list">
+            <h4 style="padding-left:20px">Company</h4>
+            <ul>
+              <li><a href="AboutPage_JsProject.html">About Us</a></li>
+              <li><a href="ContactPage_JsProject.html">Contact Us</a></li>
+              <li><a href="http://code4ct.com/blog/">Blog</a></li>
+              <li><a href="http://code4ct.com/impact/">Testimonials</a></li>
+              <li><a href="http://code4ct.com/courses/">Affliate programs</a></li>
+            </ul>
+           </div>
+
+           <div class="footer_list">
+             <h4 style="padding-left:20px">Help & Support</h4>
+             <ul>
+               <li><a href="#">Help Centre</a></li>
+               <li><a href="#">Free simple template</a></li>
+               <li><a href="#">Refund policy</a></li>
+               <li><a href="#">Report spam</a></li>
+             </ul>
+           </div>
+
+
+           <div class="footer_list">
+              <h4 style="padding-left:40px">Contact</h4>
+              <ul id="contact_section">
+                <li><i class="material-icons">call</i>021-685 0991</li>
+                <li><i class="material-icons">email</i>info@code4ct.com</li>
+                <li><i class="material-icons">location_on</i>403 Old Castle Brewery,
+                  <br/>6 Beach Rd, Woodstock,
+                  <br/>Cape Town, 7915</li>
+              </ul>
+
+           </div>
+
+         </footer>
+
+         <section id="bottom_footer">
+           <ul id="bottom_footer_list">
+             <li style="float:left">copyright © 2017 PRIVACY POLICY</li>
+             <li style="float:right;padding-right:10px"><a href="https://www.facebook.com/code4ct/"><i class="fa fa-facebook"></i></a></li>
+             <li style="float:right;padding-right:10px"><a href="https://twitter.com/@code4ct"><i class="fa fa-twitter"></i></a></li>
+             <li style="float:right;padding-right:10px"><a href="https://za.pinterest.com/"><i class="fa fa-pinterest-p"></i></a></li>
+             <li style="float:right;padding-right:10px"><a href="https://plus.google.com/discover"><i class="fa fa-google-plus"></i></a></li>
+             <li style="float:right;padding-right:10px"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+             <li style="float:right;padding-right:10px"><a href="https://www.skype.com/en/new/"><i class="fa fa-skype"></i></a></li>
+             <li style="float:right;padding-right:10px">Follow us on:</li>
+           </ul>
+         </section>
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Contact Us</title>
+    <style media="screen">
+
+    body{
+      font-family: 'Lato', sans-serif;
+      margin-left: 50px;
+      margin-right: 50px;
+      max-width: 1500px;
+      color: grey;
+    }
+
+    nav{
+      overflow: hidden;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      width: 1300px;
+    }
+
+
+   nav ul{
+       list-style-type: none;
+   }
+
+    nav li{
+        display: inline;
+        margin-bottom: 20px;
+        text-align: center;
+
+    }
+
+    nav li a {
+          text-decoration: none;
+          color: grey;
+    }
+
+    nav li a:hover{
+                  color: indianred;
+    }
+    header{
+          width: 1200px;
+          height: 200px;
+          background-color: lightgrey;
+          color: #666666;
+          text-align: center;
+          margin-top: 150px;
+    }
+
+
+    #aboutH1{
+             padding-top: 80px;
+    }
+
+
+.contact_section{
+    width: 350px;
+    height: auto;
+    padding-left: 50px;
+}
+
+.contact_section p{
+      padding-left: 20px;
+}
+
+.contact_section li{
+   padding-top:10px;
+   padding-right: 60px;
+   list-style-type: none;
+
+}
+
+.footer_list ul{
+       list-style-type: square;
+
+}
+
+.footer_list li{
+     padding-top: 10px;
+
+}
+.footer_list a{
+     color: grey;
+     text-decoration: none;
+}
+.footer_list a:hover{
+           color: indianred;
+}
+
+h4,h2{
+  color: #4d4d4d;
+}
+#contact_list li{
+       list-style-type: none;
+       padding-top: 10px;
+
+}
+
+.material-icons{
+                font-size: 15px;
+                padding-right: 10px;
+                padding-top: 10px;
+}
+
+#gridForm{
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: 1fr;
+           padding-top: 50px;
+
+}
+.form{
+        padding-left: 40px;
+        width: 600px;
+}
+
+#bottom_footer{
+  background-color: indianred;
+  width: 1249px;
+  height: 50px;
+  color: white;
+
+}
+
+#bottom_footer_list li{
+     list-style-type: none;
+      display: inline;
+      padding-top: 20px;
+}
+
+#bottom_footer li a{
+         color: white;
+}
+
+footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 1229px;
+        height: 250px;
+        padding-top: 50px;
+        grid-gap: 5px;
+        padding-left: 20px;
+}
+
+footer div{
+           height: 200px;
+           width: 300px;
+
+
+}
+
+#sendEmail{
+            width: 100px;
+            height: 50px;
+            background-color: indianred;
+            border-radius: 8px;
+            color: white;
+}
+
+#sendEmail:hover{
+           width: 150px;
+           height: 75px;
+
+}
+table{
+      padding-bottom: 20px;
+}
+textarea{
+         color: grey;
+         font-family: 'Lato', sans-serif;
+         padding-left: 20px;
+
+}
+
+.forminput{
+      text-decoration: none;
+      width: 200px;
+      height: 30px;
+}
+
+
+#message{
+     padding-left: 3px;
+}
+
+
+iframe{
+     padding-top: 100px;
+}
+    </style>
+
+
+
+  </head>
+  <body>
+
+    <nav>
+     <ul>
+       <li><img src="images\Logos\code4ct_logo_360.jpg" alt="" width="300px" height="70px"></li>
+       <li style="padding-left:80px"><a href="JS_project.html">HOME</a></li>
+       <li style="padding-left:10px"><a href="AboutPage_JsProject.html">ABOUT</a></li>
+       <li style="padding-left:10px"><a href="CoursesPage_JsProject.html">COURSES</a></li>
+       <li style="padding-left:10px"><a href="ContactPage_JsProject.html">CONTACT</a></li>
+       <input type="text" placeholder="search"  maxlength="10px" size="15">
+       <button id="search"><i style="font-size:12.5px;color:indianred" class="fa">&#xf002;</i></button>
+     </ul>
+    </nav>
+        <header>
+          <h1 id="aboutH1">CONTACT US</h1>
+        </header>
+
+     <div id=gridForm>
+        <div class="form">
+          <h2>Send Us a Message</h2>
+          <form>
+            <table>
+              <tr>
+                <td><input type="text" class="forminput" name="name" placeholder="Your Name"></td>
+                <td><input type="text" class="forminput" name="email" placeholder="Your Email" id="email-input"></td>
+                <td><input type="text" class="forminput" name="number" placeholder="Phone Number" id="phoneNumber-input"></td>
+               </tr>
+          </form>
+        </table>
+            <div id="message">
+           <textarea rows="8" cols="83" value="Your Message">
+          Your Messages
+           </textarea>
+          <button type="button" name="button" id="sendEmail" onclick="check()">Send Email</button>
+          <p id="validity-text"></p>
+          <p id="validity-textNumber"></p>
+        </div>
+        </div>
+
+
+                     <script type="text/javascript">
+
+                      function check()
+                      {
+                        if(!document.getElementById("email-input").checkValidity())
+                        {
+
+                          //do stuff here ie. show errors
+                          document.getElementById('validity-text').innerHTML ="input not valid!";
+
+                        }else
+                        {
+                            callMeIfValid();
+                        }
+                      }
+
+                      function callMeIfValid()
+                      {
+                        //submit form or whatever
+                           document.getElementById('validity-text').innerHTML = "valid input";
+                      }
+
+                      function check() {
+                          var x, text;
+
+                          // Get the value of the input field with id="numb"
+                          x = document.getElementById("phoneNumber-input").value;
+
+                          // If x is Not a Number or less than one or greater than 10
+                          if (isNaN(x) || x < 1 || x > 10) {
+                              text = "Input not valid";
+                          } else {
+                              text = "Input OK";
+                          }
+                          document.getElementById("validity-textNumber").innerHTML = text;
+                      }
+                     </script>
+
+
+         <div class="contact_section">
+            <h2 style="padding-left:40px">Contact</h2>
+            <p style="padding-left:40px">Feel free to contact us for any queries or questions</p>
+            <ul id="contact_list">
+              <li><i class="material-icons">call</i>021-685 0991</li>
+              <li><i class="material-icons">email</i>info@code4ct.com</li>
+              <li><i class="fa fa-clock-o"></i>Mon-Fri 09.00-12.00</li>
+              <li><i class="material-icons">location_on</i>403 Old Castle Brewery,
+                <br/>6 Beach Rd, Woodstock,
+                <br/>Cape Town, 7915</li>
+            </ul>
+         </div>
+
+</div>
+
+
+ <div class="map">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.6380624459885!2d18.44652591510909!3d-33.924713680640906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5d9854044ed9%3A0x6a0ebf49da5aabab!2sCodeSpace!5e0!3m2!1sen!2sza!4v1510585063199" width="1200px" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+ </div>
+
+
+
+          <footer>
+            <div class="footer_list">
+             <h4>Legal</h4>
+              <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+            </div>
+
+            <div class="footer_list">
+              <h4 style="padding-left:20px">Company</h4>
+              <ul>
+                <li><a href="AboutPage_JsProject.html">About Us</a></li>
+                <li><a href="ContactPage_JsProject.html">Contact Us</a></li>
+                <li><a href="http://code4ct.com/blog/">Blog</a></li>
+                <li><a href="http://code4ct.com/impact/">Testimonials</a></li>
+                <li><a href="http://code4ct.com/courses/">Affliate programs</a></li>
+              </ul>
+             </div>
+
+             <div class="footer_list">
+               <h4 style="padding-left:20px">Help & Support</h4>
+               <ul>
+                 <li><a href="#">Help Centre</a></li>
+                 <li><a href="#">Free simple template</a></li>
+                 <li><a href="#">Refund policy</a></li>
+                 <li><a href="#">Report spam</a></li>
+               </ul>
+             </div>
+
+
+            <div class="footer_list">
+               <h4 style="padding-left:40px">Contact</h4>
+               <ul id="conli">
+                 <li><i class="material-icons">call</i>021-685 0991</li>
+                 <li><i class="material-icons">email</i>info@code4ct.com</li>
+                 <li><i class="material-icons">location_on</i>403 Old Castle Brewery,
+                   <br/>6 Beach Rd, Woodstock,
+                   <br/>Cape Town, 7915</li>
+               </ul>
+
+            </div>
+
+          </footer>
+
+          <section id="bottom_footer">
+
+
+            <ul id="bottom_footer_list">
+              <li style="float:left">copyright © 2017 PRIVACY POLICY</li>
+              <li style="float:right;padding-right:10px"><a href="https://www.facebook.com/code4ct/"><i class="fa fa-facebook"></i></a></li>
+              <li style="float:right;padding-right:10px"><a href="https://twitter.com/@code4ct"><i class="fa fa-twitter"></i></a></li>
+              <li style="float:right;padding-right:10px"><a href="https://za.pinterest.com/"><i class="fa fa-pinterest-p"></i></a></li>
+              <li style="float:right;padding-right:10px"><a href="https://plus.google.com/discover"><i class="fa fa-google-plus"></i></a></li>
+              <li style="float:right;padding-right:10px"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+              <li style="float:right;padding-right:10px"><a href="https://www.skype.com/en/new/"><i class="fa fa-skype"></i></a></li>
+              <li style="float:right;padding-right:10px">Follow us on:</li>
+             </ul>
+
+
+          </section>
+
+
+
+
+
+  </body>
+</html>

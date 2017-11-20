@@ -1,0 +1,822 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="CSS/zoomin.css"> -->
+    <meta charset="utf-8">
+    <title>Home</title>
+
+    <style media="screen">
+    body{
+      font-family: 'Lato', sans-serif;
+      margin-left: 50px;
+      margin-right: 50px;
+      max-width: 1500px;
+      color: grey;
+    }
+
+    nav{
+      overflow: hidden;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+
+   nav ul{
+       list-style-type: none;
+   }
+
+    nav li{
+        display: inline;
+        margin-bottom: 20px;
+        text-align: center;
+
+    }
+    nav li a {
+          text-decoration: none;
+          color: grey
+    }
+
+    nav li a:hover{
+                   color: indianred;
+    }
+    .caption_text{
+      background-color: rgba(0,0,0,.6);
+      opacity: 10%;
+      color: white;
+      width:500px;
+      text-align: center;
+      top: 210px;
+      margin-left: 390px;
+      height: 200px;
+      scroll-behavior: auto;
+      position: absolute;
+
+    }
+
+
+     #butt{
+          bottom:150px;
+          position: absolute;
+          margin-left: 470px;
+     }
+
+     #butt input{
+                 width: 150px;
+                 height: 30px;
+                 border-radius: 7%;
+                 background-color: transparent;
+                 color: white;
+                 font-weight: bold;
+     }
+
+
+     #butt input:hover{
+                       background-color: #ff4d4d;
+                       width: 225px;
+                       height: 45px;
+      }
+
+      .btn_right{
+                float: left;
+                background-color: rgba(0,0,0,.6);
+                top: 210px;
+      }
+      .btn_left{
+               float: right;
+               background-color: rgba(0,0,0,.6);
+               top: 210px;
+
+             }
+    #code4ct_info{
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: 1fr ;
+           grid-gap: 5px;
+           margin-top: 150px;
+           margin-bottom: 150px;
+           width: 1229px;
+
+      }
+
+      #nested_grid{
+           display: grid;
+           grid-template-columns: 1fr 1fr ;
+           grid-template-rows: 1fr 1fr;
+           grid-gap: 20px;
+           padding-top: 10px;
+           height: 500px;
+      }
+
+   #code4ct_info2{
+        height: 400px;
+        width: 500px;
+   }
+   h4,h2,h3{
+      color: #4d4d4d;
+   }
+    #skills_section{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-left: 200px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: black;
+            grid-gap: 0px;
+    }
+     #skills_section p{
+             width: 200px;
+             height: 100px;
+     }
+
+      #skills_section h3{
+         padding-left: 15px;
+
+    }
+
+.grid_portfolio{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 1fr 1fr;
+       background-color: white;
+       width: 200px;
+       height: 200px;
+       grid-gap: 5px;
+       padding-left: 100px;
+       grid-gap: 10px;
+}
+
+.grid_portfolio_section2{
+        padding-right: 120px;
+}
+
+#section_portfolio{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 1249px;
+    height: 450px;
+    padding-top: 90px;
+
+}
+
+#portfolio_section{
+     padding-top: 50px;
+
+}
+#portfolio_section p {
+        margin-left: 100px;
+        width: 800px;
+}
+#portfolio_section h2{
+      margin-left: 100px;
+}
+
+#theteam{
+        margin-left: 100px;
+        padding-bottom: 100px;
+
+}
+
+#team_images{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-row: 1fr 1fr;
+}
+
+ .about_info ul{
+           list-style-type: none;
+           display: inline;
+           padding-right: 100px;
+
+
+ }
+
+ .about_info li {
+           display: inline;
+           padding-left: 10px;
+ }
+
+
+.about_info li a{
+            color: grey;
+}
+
+ .timer{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+       grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+       width: 1150px;
+       height: 200px;
+       background-color: black;
+       padding-top: 90px;
+       padding-left: 100px;
+       color: white
+ }
+
+  .timer div h4{
+    color: white;
+  }
+
+ .counter{
+         font-weight: 50px;
+         color: white;
+         font-size: 40px;
+ }
+
+  #sub-btn{
+    background-color: indianred;
+    border-radius: 5px;
+    width: 90px;
+    height: 25px;
+    text-align: center;
+    color: white;
+  }
+
+  #sub-btn:hover{
+              background-color: indianred;
+              color: white;
+              width: 135px;
+              height: 37.5px;
+
+  }
+
+  #subscribe_section{
+       padding-bottom: 70px;
+       padding-top: 70px;
+       text-align: center;
+
+  }
+
+
+
+  #carousel_ul{
+                list-style-type: none;
+  }
+
+  #carousel_ul li{
+                  display: inline;
+  }
+  #carousel_container{
+                     height: 250px;
+                     width: 1060px;
+                     background-color: black;
+                     padding-top: 70px;
+                     padding-left: 190px;
+  }
+
+  footer{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+          width: 1229px;
+          height: 250px;
+          padding-top: 50px;
+          grid-gap: 5px;
+          padding-left: 20px;
+  }
+
+  footer div{
+             height: 200px;
+             width: 300px;
+
+
+  }
+
+ .material-icons{
+                 font-size: 15px;
+                 padding-right: 10px;
+                 padding-top: 10px;
+ }
+
+
+
+
+ #contact_list li{
+        list-style-type: none;
+        padding-top: 10px;
+
+ }
+ .footer_list ul{
+        list-style-type: square;
+
+ }
+
+  .footer_list li{
+       padding-top: 10px;
+       }
+ .footer_list a{
+       color: grey;
+       text-decoration: none
+ }
+ .footer_list a:hover{
+             color: indianred;
+ }
+
+ h4,h1,h3,h2{
+    color: #4d4d4d;
+ }
+
+ #bottom_footer_list{
+   background-color: indianred;
+   width: 1249px;
+   height: 50px;
+   color: white;
+
+ }
+
+ #bottom_footer li{
+      list-style-type: none;
+       display: inline;
+       padding-top: 20px;
+ }
+
+#bottom_footer li a{
+         color: white;
+}
+ h2 a{
+       color: #4d4d4d;
+       text-decoration: none;
+ }
+
+#readmore{
+              display: none;
+
+}
+
+#btnreadmore{
+             color: white;
+             width: 100px;
+             height: 30px;
+             background-color: indianred;
+
+}
+
+#btnreadmore:hover{
+                  width: 150px;
+                  height: 45px;
+                  color: white;
+
+
+}
+
+
+#skills_section img{
+     padding-left: 20px;
+}
+
+.first_Word{
+            border-bottom: 4px solid indianred;
+            padding-right: 5px;
+}
+
+.second_part{
+             border-bottom: 2px solid lightgrey;
+             padding-bottom: 1px;
+}
+    </style>
+  </head>
+  <body>
+
+    <nav>
+     <ul>
+       <li><img src="images\Logos\code4ct_logo_360.jpg" alt="" width="300px" height="70px"></li>
+       <li style="padding-left:80px"><a href="JS_project.html">HOME</a></li>
+       <li style="padding-left:10px"><a href="AboutPage_JsProject.html">ABOUT</a></li>
+       <li style="padding-left:10px"><a href="CoursesPage_JsProject.html">COURSES</a></li>
+       <li style="padding-left:10px"><a href="ContactPage_JsProject.html">CONTACT</a></li>
+       <input type="text" placeholder="search"  maxlength="10px" size="15">
+       <button id="search"><i style="font-size:12.5px;color:indianred" class="fa">&#xf002;</i></button>
+     </ul>
+    </nav>
+
+
+
+  <div class="slide_show">
+    <div class="caption_text">
+      <h1 id="hoo" style="color:white">Code for Cape Town</h1>
+      <p id="p1">We want to see young women empowered to leverage technology for social innovation, so that there is greater diversity in the African tech industry. We want high school girls to have an enabling environment to imagine and create new technology that is relevant to a South African context.</p>
+      </div>
+     <div id="butt">
+      <a href="AboutPage_JsProject.html"><input type="button" name="READ MORE" value="ABOUT US"></a>
+      <a href="CoursesPage_JsProject.html"><input type="button" name="DONATE NOW" value="COURSES"></a>
+    </div>
+
+     <div>
+       <img class="mySlides" src="images\home_slide.JPG" style="width:1250px" height="650px">
+       <img class="mySlides" src="images\home_slide1.JPG" style="width:1250px" height="650px">
+       <img class="mySlides" src="images\home_slide2.JPG" style="width:1250px" height="650px">
+       <img class="mySlides" src="images\home_slide1.JPG" style="width:1250px" height="650px">
+
+       <button class="btn_right" onclick="plusDivs(-1)">&#10094;</button>
+       <button class="btn_left" onclick="plusDivs(1)">&#10095;</button>
+     </div>
+     </div>
+
+
+        <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+          }
+          x[slideIndex-1].style.display = "block";
+        }
+        </script>
+
+
+    <div id="code4ct_info">
+
+       <div id="code4ct_info2">
+         <h2><span class="first_Word">Who</span><span class="second_part">We Are?</span></h2>
+         <h4>Code for Cape Town strives to see young women empowered to leverage technology for social innovation, so that there is greater diversity in the African tech industry</h4>
+         <p>Over the past 3 years, Code for Cape Town has reached over 600 young women with coding and social innovation. Not only have they been exposed to coding but they have also done careers and life skills courses, design thinking workshops and social innovation projects to address local challenges.
+          Our alumnae that joined the program in 2014 and 2015 have now left high school and many of them have gone on to enter STEM related tertiary studies or skills development.</p>
+          <p id="readmore">These are skills that everyone should have. Even if you have no intention of becoming a professional coder, you will benefit from knowing how to think in this way in this increasingly computerized economy. A growing number of permanent job positions that use information technology to deliver a product or a service are becoming available in the local economy.  It is estimated that nearly 75000 such jobs will come online in South Africa within the next five years.  These digital jobs will mostly be driven by the ICT, Business Process Outsourcing (BPO), and the financial services industries.  These are the fastest growing sectors in our economy.  They are also the sectors that have the highest demand for entry-level digital skills.</p>
+          <button id="btnreadmore">Read More</button>
+
+       </div>
+
+       <script type="text/javascript">
+
+          $("#btnreadmore").click(function(){
+           $("#readmore").fadeToggle();
+          });
+
+          $("#btnreadmore").click(function(){
+
+          });
+
+       </script>
+
+       <div id="nested_grid">
+
+           <div>
+              <img src="images\whoarewe.JPG" alt="" width="350px" height="300px">
+           </div>
+
+           <div>
+              <img src="images\portimg6.JPG" alt="" width="350px" height="300px">
+           </div>
+
+           <div>
+            <img src="images\portimg8.JPG" alt="" width="350px" height="300px">
+           </div>
+
+           <div>
+              <img src="images\portimg12.JPG" alt="" width="350px" height="300px">
+           </div>
+
+       </div>
+
+    </div>
+
+<section id="skills_section">
+
+  <div>
+    <img src="images\Logos\monitor_360.png" alt="" width="90px" height="50px" style="padding-left:30px">
+    <h2 style="padding-left:30px">Coding</h2>
+    <p>Learn how to build your own websites using HTML, CSS, JavaScript & JQuery. Go on to explore exciting modules from game development to user experience design.</p>
+  </div>
+
+  <div>
+    <img src="images\Logos\multimedia_360.png" alt="" width="90px" height="50px">
+    <h2>Communication</h2>
+    <p>Learn how to pitch ideas, represent yourself online, communicate professionally and work with online collaboration tools.</p>
+  </div>
+
+  <div>
+    <img src="images\Logos\wrench_360.png" alt="" width="90px" height="50px">
+    <h2>Problem Solving</h2>
+    <p>Apply your coding skills to issues you are interested in. You will learn how to tackle complex problems using the design thinking process.</p>
+  </div>
+
+</section>
+
+<section id="portfolio_section">
+  <h2><a href="PortfolioPage_JsProject2.html"><span class="first_Word">Our</span><span class="second_part">Awesome Portfolio</span></a></h2>
+  <p>Coding is in essence the ability to tell a computer what to do.  With the rise of smart phones, more and more of us carry around a little computer that can be programmed to do specific things through a coding language. Those of us who can speak code will be able to.</p>
+
+<section id="section_portfolio">
+  <div class="grid_portfolio">
+    <div>
+      <img src="images\portimg1.JPG" alt="" width="200px" height="153px">
+    </div>
+
+    <div>
+      <img src="images\portimg2.JPG" alt="" width="200px" height="153px">
+    </div>
+
+    <div>
+      <img src="images\portimg4.JPG" alt="" width="200px" height="153px">
+    </div>
+
+    <div>
+      <img src="images\portimg5.JPG" alt="" width="200px" height="153px">
+    </div>
+  </div>
+
+  <div class="grid_portfolio_section2">
+   <img src="images\portimg.jpg" alt1"" width="600px" height="319px">
+  </div>
+</section>
+
+</section>
+
+<div>
+    <section id="theteam">
+      <h2><span class="first_Word">Meet</span><span class="second_part">Our Team</span></h2>
+      <p>This is part of our core team.</p>
+
+        <div id="team_images">
+
+          <div>
+           <a class="lightbox" href="#Emma"><img src="images\Team\Emma.jpg" alt="" width="200px" height="280px"></a>
+          </div>
+
+           <div class="about_info">
+             <h2>Emma Dicks</h2>
+             <caption><i>Founder and Director</i></caption>
+             <p>Emma is passionate about providing high quality education that enables young people to bring innovative ideas to life and play an active role in South Africa’s economy.</p>
+             <ul>
+               <li><a href=""><i class="fa fa-facebook"></i></a></li>
+               <li><a href=""><i class="fa fa-twitter"></i></a></li>
+               <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+               <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+               <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+               <li><a href=""><i class="fa fa-skype"></i></a></li>
+             </ul>
+           </div>
+
+           <div>
+             <a class="lightbox" href="#Andrea"><img src="images\Team\Andrea.jpg" alt="" width="200px" height="280px"></a>
+           </div>
+
+           <div class="about_info">
+             <h2>Andrea Petersen</h2>
+             <caption><i>Operations Lead</i></caption>
+             <p>Andrea thrives on seeing key players in the Code4CT ecosystem discover how they can make the greatest impact.</p>
+             <ul>
+               <li><a href=""><i class="fa fa-facebook"></i></a></li>
+               <li><a href=""><i class="fa fa-twitter"></i></a></li>
+               <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+               <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+               <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+               <li><a href=""><i class="fa fa-skype"></i></a></li>
+             </ul>
+          </div>
+
+           <div class="about_info">
+             <a class="lightbox" href="#Tegan"><img src="images\Team\Tegan.jpg" alt="" width="200px" height="280px"></a>
+           </div>
+
+           <div class="about_info">
+             <h2>Tegan Crous</h2>
+             <caption><i>Program Lead</i></caption>
+             <p>Tegan heads up the high school program.She is spurred on by a heart for people and seeing them pursue their potential in a safe, fun and nurturing environment.</p>
+             <ul>
+               <li><a href=""><i class="fa fa-facebook"></i></a></li>
+               <li><a href=""><i class="fa fa-twitter"></i></a></li>
+               <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+               <li><a href=""> <i class="fa fa-google-plus"></i></a></li>
+               <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+               <li><a href=""><i class="fa fa-skype"></i></a></li>
+             </ul>
+           </div>
+
+           <div>
+             <a class="lightbox" href="#Tracy"><img src="images\Team\Tracy.jpg" alt="" width="200px" height="280px"></a>
+           </div>
+
+           <div class="about_info">
+             <h2>Tracy-Anne Sikenjana</h2>
+             <caption><i>Leadership Program Manager</i></caption>
+             <p>Tracy joined the Code4CT program in 2015 and then matriculated from Rustenburg Girls’ High in 2016. She decided to intern with Code4CT to give back to an organisation that had a large impact on her.</p>
+             <ul>
+               <li><a href=""><i class="fa fa-facebook"></i></a></li>
+               <li><a href=""><i class="fa fa-twitter"></i></a></li>
+               <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+               <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+               <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+               <li><i class="fa fa-skype"></i></li>
+             </ul>
+           </div>
+
+         </div>
+
+       </section>
+
+
+      <!-- <div class="display-lightbox">
+        <div class="lightbox-target"  id="Emma">
+          <img src="images\Team\Emma.jpg">
+          <a class="lightbox-close" href="#"></a>
+       </div>
+
+       <div class="lightbox-target" id="Tracy">
+          <img src="images\Team\Tracy.jpg">
+          <a class="lightbox-close" href="#"></a>
+       </div>
+
+       <div class="lightbox-target" id="Andrea">
+          <img src="images\Team\Andrea.jpg">
+          <a class="lightbox-close" href="#"></a>
+       </div>
+
+       <div class="lightbox-target" id="Tegan">
+          <img src="images\Team\Tegan.jpg">
+          <a class="lightbox-close" href="#"></a>
+       </div>
+<div> -->
+
+
+   <section class="timer">
+         <div class="counter" data-count="1050">
+           0
+         </div>
+         <div class="counter"  data-count="1850">
+           0
+         </div>
+         <div class="counter"  data-count="2000">
+           0
+         </div>
+         <div class="counter"  data-count="3300">
+           0
+         </div>
+         <div class="counter"  data-count="2600">
+           0
+         </div>
+
+         <div>
+            <h4>Number of Girls</h4>
+         </div>
+         <div>
+            <h4>Finish project</h4>
+         </div>
+         <div>
+            <h4>Cups of coffee</h4>
+         </div>
+         <div>
+            <h4>Working Days</h4>
+         </div>
+         <div>
+            <h4>Honors & Awards</h4>
+         </div>
+   </section>
+
+   <script src="Js_\JsProject.js"></script>
+
+             <section id="subscribe_section">
+               <h3><i class="fa fa-paper-plane" style="font-size:20px;color:indianred;padding-right:20px"></i>SUBSCRIBE TO US</h3>
+               <p>Join our weekly subscription for the latest news on Code4ct</p>
+               <input type="email" name="email" placeholder="enter your email" id="email-input"><button type="button" name="button" id="sub-btn" onclick="check()">Submit</button>
+                <p id="validity-text"></p>
+             </section>
+
+
+             <script type="text/javascript">
+
+              function check()
+              {
+                if(!document.getElementById("email-input").checkValidity())
+                {
+
+                  //do stuff here ie. show errors
+                  document.getElementById('validity-text').innerHTML ="input not valid!";
+
+                }else
+                {
+                    callMeIfValid();
+                }
+              }
+
+              function callMeIfValid()
+              {
+                //submit form or whatever
+                   document.getElementById('validity-text').innerHTML = "valid input";
+              }
+             </script>
+
+
+
+
+              <div id='carousel_container'>
+              <div id='carousel_inner'>
+              <ul id='carousel_ul'>
+                  <li>
+                    <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F819T062G-0e4d5651ed/openboxlogo._360.jpg' width="120" height="100px"/>
+                  </li>
+
+                  <li>
+                    <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F82ATB20P-1e13cf13db/45_case_study_logos_11_csg._360.jpg' width="120" height="100px"/>
+                  </li>
+
+                  <li>
+                    <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F80JKGBMW-4efba088aa/deloitte-logo._360.jpg' width="120" height="100px"/>
+                  </li>
+
+                  <li>
+                    <img  src='https://files.slack.com/files-tmb/T6R8ZLWGK-F8167E93M-3d574ea6b6/mazars-logo._360.jpg' width="120" height="100px"/>
+                  </li>
+
+                  <li>
+                    <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F819SVA04-9739d3d999/mobenzi_logo._360.jpg' width="120" height="100px"/>
+                   </li>
+
+                   <li>
+                     <img src="https://files.slack.com/files-tmb/T6R8ZLWGK-F82ATE90X-518f205964/takealot-logo._360.jpg" width="120" height="100px">
+                   </li>
+
+                   <li>
+                     <img src="https://files.slack.com/files-tmb/T6R8ZLWGK-F80JKJNE4-f29fec516e/tns-logo._360.jpg" alt="" width="120" height="100px">
+                   </li>
+
+                  </ul>
+              </div>
+          </div>
+
+          <script src="Js_\JsProjectSlider.js"></script>
+
+
+
+            <footer>
+              <div class="footer_list">
+               <h4>Legal</h4>
+                <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+              </div>
+
+              <div class="footer_list">
+                <h4 style="padding-left:20px">Company</h4>
+                <ul>
+                  <li><a href="AboutPage_JsProject.html">About Us</a></li>
+                  <li><a href="ContactPage_JsProject.html">Contact Us</a></li>
+                  <li><a href="http://code4ct.com/blog/">Blog</a></li>
+                  <li><a href="http://code4ct.com/impact/">Testimonials</a></li>
+                  <li><a href="http://code4ct.com/courses/">Affliate programs</a></li>
+                </ul>
+               </div>
+
+               <div class="footer_list">
+                 <h4 style="padding-left:20px">Help & Support</h4>
+                 <ul>
+                   <li><a href="#">Help Centre</a></li>
+                   <li><a href="#">Free simple template</a></li>
+                   <li><a href="#">Refund policy</a></li>
+                   <li><a href="#">Report spam</a></li>
+                 </ul>
+               </div>
+
+
+              <div class="footer_list">
+                 <h4 style="padding-left:40px">Contact</h4>
+                 <ul id="contact_list">
+                   <li><i class="material-icons">call</i>021-685 0991</li>
+                   <li><i class="material-icons">email</i>info@code4ct.com</li>
+                   <li><i class="material-icons">location_on</i>403 Old Castle Brewery,
+                     <br/>6 Beach Rd, Woodstock,
+                     <br/>Cape Town, 7915</li>
+                 </ul>
+
+              </div>
+
+            </footer>
+
+            <section id="bottom_footer_list">
+
+
+              <ul id="bottom_footer">
+                 <li style="float:left">copyright © 2017 PRIVACY POLICY</li>
+                 <li style="float:right;padding-right:10px"><a href="https://www.facebook.com/code4ct/"><i class="fa fa-facebook"></i></a></li>
+                 <li style="float:right;padding-right:10px"><a href="https://twitter.com/@code4ct"><i class="fa fa-twitter"></i></a></li>
+                 <li style="float:right;padding-right:10px"><a href="https://za.pinterest.com/"><i class="fa fa-pinterest-p"></i></a></li>
+                 <li style="float:right;padding-right:10px"><a href="https://plus.google.com/discover"><i class="fa fa-google-plus"></i></a></li>
+                 <li style="float:right;padding-right:10px"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                 <li style="float:right;padding-right:10px"><a href="https://www.skype.com/en/new/"><i class="fa fa-skype"></i></a></li>
+                 <li style="float:right;padding-right:10px">Follow us on:</li>
+               </ul>
+
+
+            </section>
+
+
+
+
+  </body>
+</html>
